@@ -68,6 +68,14 @@ const app = express();
 const port = process.env.PORT || 3001; // Better for deployment
 
 app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://weather-pi-rosy.vercel.app',
+    'https://your-production-frontend-url.vercel.app'
+  ]
+}));
+
+app.use(cors({
   origin: ['http://localhost:3000', 'https://weather-pi-rosy.vercel.app']
 }));
 app.use(express.json());
