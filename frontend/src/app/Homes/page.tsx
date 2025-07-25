@@ -70,6 +70,7 @@ export default function Homes() {
       
     } catch (err: any) {
       setError(err.message || "An error occurred");
+      console.error("Error fetching weather data:", err);
     } finally {
       setLoading(false);
     }
