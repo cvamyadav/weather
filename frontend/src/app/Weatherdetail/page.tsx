@@ -6,7 +6,7 @@ export default function HistoryPage() {
   const [searchHistory, setSearchHistory] = useState<string[]>([]);
 
   useEffect(() => {
-    // Only run on client side
+   
     if (typeof window !== "undefined") {
       const savedHistory = localStorage.getItem('searchHistory');
       if (savedHistory) {
@@ -16,7 +16,6 @@ export default function HistoryPage() {
   }, []);
 
   const handleSearch = (city: string) => {
-    // This will redirect to home page with the city as query parameter
     window.location.href = `/Homes?search=${encodeURIComponent(city)}`;
   };
 

@@ -210,7 +210,6 @@ export default function detail() {
         
         {weather && (
           <div className="space-y-8">
-            {/* Current Weather Section */}
             <div className="bg-gray-800 rounded-lg p-6 border border-gray-700 shadow-lg">
               <h2 className="text-xl font-bold mb-4">Current Weather</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -235,7 +234,6 @@ export default function detail() {
               </div>
             </div>
 
-            {/* Daily Forecast Section */}
             {weather.daily && weather.daily_units && (
               <div className="bg-gray-800 rounded-lg p-6 border border-gray-700 shadow-lg">
                 <h2 className="text-xl font-bold mb-4">7-Day Forecast</h2>
@@ -278,7 +276,6 @@ export default function detail() {
               </div>
             )}
 
-            {/* Location Information Section */}
             <div className="bg-gray-800 rounded-lg p-6 border border-gray-700 shadow-lg">
               <h2 className="text-xl font-bold mb-4">Location Information</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

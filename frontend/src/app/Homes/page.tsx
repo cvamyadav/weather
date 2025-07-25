@@ -1,4 +1,4 @@
-// 
+
 "use client"
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -61,9 +61,7 @@ export default function Homes() {
       const data = await response.json();
       setWeather(data);
       
-      // Update search history
       setSearchHistory(prev => {
-        // Prevent duplicates
         if (!prev.includes(searchQuery.trim())) {
           return [...prev, searchQuery.trim()];
         }

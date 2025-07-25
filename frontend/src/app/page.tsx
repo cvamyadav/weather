@@ -9,7 +9,6 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    // { name: "Home", href: "/Homes" },
     { name: "Detailed View", href: "/detail" },
     { name: "History", href: "/Weatherdetail" },
     { name: "About", href: "/apidetail" },
@@ -19,7 +18,6 @@ export default function Home() {
     <nav className="bg-gray-800 border-b border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo/Brand */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
               <svg
@@ -39,7 +37,6 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link) => (
@@ -60,7 +57,6 @@ export default function Home() {
           </div>
 
           
-          {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -106,7 +102,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
