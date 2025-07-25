@@ -1,0 +1,33 @@
+# Dependency directories
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Cache and temp files
+.tmp/
+.cache/
+
+# Environment variables
+.env*.local
+.env
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Optional (if using TypeScript)
+*.tsbuildinfo
