@@ -1,17 +1,17 @@
 const express = require('express');
-const cors = require('cors'); // Make sure to install: npm install cors
+const cors = require('cors'); 
+const fetch = require('node-fetch');
 const app = express();
 
 const port = 3001;
 app.use(cors({
-  origin: ['http://localhost:3000','https://weather-pi-rosy.vercel.app' ]// Allow your Next.js frontend
+  origin: ['http://localhost:3000','https://weather-pi-rosy.vercel.app' ]
 }));
 app.use(express.json());
 
-// Add this endpoint (fixing the city parameter access)
-app.get('/api/weatherdaily/:city', async (req, res) => { // Added ? for optional param
+app.get('/api/weatherdaily/:city', async (req, res) => { 
   try {
-    const city = req.params.city || req.query.city || "varanasi"; // Check both params and query
+    const city = req.params.city || req.query.city || "varanasi"; 
     const weatherData = await getWeatherByCity(city);
     if (!weatherData) {
       return res.status(404).json({ error: 'Weather data not found' });
@@ -23,7 +23,7 @@ app.get('/api/weatherdaily/:city', async (req, res) => { // Added ? for optional
   }
 });
 
-// Move getWeather function outside of getWeatherByCity
+
 async function getWeather(latitude, longitude) {
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m`;
   
