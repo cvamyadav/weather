@@ -5,7 +5,7 @@ const app = express();
 
 const port = 3001;
 app.use(cors({
-  origin: ['http://localhost:3000','https://weather-pi-rosy.vercel.app' ]
+  origin: ['http://localhost:3000','https://weather-pi-rosy.vercel.app' ,'https://weather-xi-beryl-29.vercel.app/']
 }));
 app.use(express.json());
 
