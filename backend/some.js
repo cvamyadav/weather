@@ -5,7 +5,7 @@ const app = express();
 
 const port = 3001;
 app.use(cors({
-  origin: ['http://localhost:3000','https://weather-pi-rosy.vercel.app' ,'https://vercel.com/shivam-yadavs-projects-c0e68ae6/weather/31qJP4yS9tSVxykNPuW2DWwLKtSk']
+  origin: ['http://localhost:3000','https://weather-six-rho-80.vercel.app/' ,'https://vercel.com/shivam-yadavs-projects-c0e68ae6/weather/31qJP4yS9tSVxykNPuW2DWwLKtSk']
 }));
 app.use(express.json());
 
