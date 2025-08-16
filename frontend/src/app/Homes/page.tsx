@@ -42,20 +42,22 @@ export default function Homes() {
     localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
   }, [searchHistory]);
 
+  let lastRequest = Promise.resolve();
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!searchQuery.trim()) return;
     
     setLoading(true);
     setError(null);
-    
+
+   
     try {
       const response = await fetch(
         `http://localhost:3001/api/weatherdaily/${searchQuery}`
       );
       
       if (!response.ok) {
-        throw new Error("Failed to fetch weather data");
+        throw new Error("Search again");
       }
       
       const data = await response.json();
@@ -74,6 +76,7 @@ export default function Homes() {
     } finally {
       setLoading(false);
     }
+      return lastRequest; 
   };
 
   return (
