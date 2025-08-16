@@ -53,7 +53,7 @@ export default function Homes() {
    
     try {
       const response = await fetch(
-        `http://localhost:3001/api/weatherdaily/${searchQuery}`
+        `https://weather-six-rho-80.vercel.app/api/weatherdaily/${searchQuery}`
       );
       
       if (!response.ok) {
